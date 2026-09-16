@@ -9,6 +9,7 @@ import { Billing } from './screens/Billing.jsx'
 import { InviteAccept } from './screens/InviteAccept.jsx'
 
 import { LandingPage } from './screens/LandingPage.jsx'
+import { GuestApp } from './guest/GuestApp.jsx'
 
 function NavLink({ to, children }) {
   return (
@@ -35,10 +36,11 @@ export function App() {
     return off
   }, [])
 
-  if (!ready) return <div class="boot">GetMyPhotos</div>
-
   const invite = path.match(/^\/invite\/([A-Za-z0-9_-]{20,})\/?$/)
-  // When logged out, render the rich Landing Page featuring both Guest and Organizer portals
+  const isGuestRoute = path.startsWith('/e/') || path.startsWith('/me') || path.startsWith('/g/') || path === '/join' || path === '/privacy'
+  if (isGuestRoute) return <GuestApp />
+
+  // When logged out on organizer root, render the unified Landing Page
   if (!user) return <LandingPage />
 
   let m

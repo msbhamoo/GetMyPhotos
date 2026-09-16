@@ -1,5 +1,6 @@
 import { useState } from 'preact/hooks'
 import { Login } from './Login.jsx'
+import { navigate } from '../router.js'
 
 export function LandingPage({ onLoggedIn }) {
   const [role, setRole] = useState('both') // 'both' | 'organizer' | 'guest'
@@ -9,8 +10,7 @@ export function LandingPage({ onLoggedIn }) {
     e.preventDefault()
     const clean = guestCode.replace(/[^A-Za-z0-9]/g, '').toUpperCase()
     if (clean.length >= 4) {
-      // Redirect to guest app with code
-      window.location.href = `http://localhost:5173/e/${clean}`
+      navigate(`/e/${clean}`)
     }
   }
 

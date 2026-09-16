@@ -1,5 +1,5 @@
-const BASE = import.meta.env.VITE_API_URL || 'http://localhost:8000/v1'
-export const GUEST_URL = import.meta.env.VITE_GUEST_URL || 'http://localhost:5173'
+const BASE = import.meta.env.VITE_API_BASE_URL || import.meta.env.VITE_API_URL || 'http://localhost:8000/v1'
+export const GUEST_URL = import.meta.env.VITE_GUEST_URL || ''
 
 let access = null
 let user = null
