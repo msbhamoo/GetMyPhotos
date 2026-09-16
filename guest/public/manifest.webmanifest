@@ -1,0 +1,9 @@
+{
+  "name": "GetMyPhotos",
+  "short_name": "GetMyPhotos",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff8eb",
+  "theme_color": "#8c141e",
+  "icons": [{ "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

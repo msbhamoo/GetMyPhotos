@@ -1,0 +1,15 @@
+{
+  "name": "getmyphotos-landing",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "next dev -p 5175",
+    "build": "next build",
+    "start": "npx serve out"
+  },
+  "dependencies": {
+    "next": "^15.5.4",
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  }
+}
