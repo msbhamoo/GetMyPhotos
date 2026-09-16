@@ -2,7 +2,8 @@ import { useState } from 'preact/hooks'
 import { Header } from '../components/LangBar.jsx'
 import { t } from '../i18n.js'
 import { navigate } from '../router.js'
-import { api, store } from '../api.js'
+import { api } from '../api.js'
+import { store } from '../store.js'
 
 export function Join({ initialError = null, initialCode = '' }) {
   const [code, setCode] = useState(initialCode)
